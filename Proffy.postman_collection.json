@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "d2a907cc-6cc6-4fa3-a942-2ad5765e6776",
+		"name": "Proffy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Connections",
+			"item": [
+				{
+					"name": "Create Connections",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Diego Fernandes\",\r\n    \"avatar\": \"https://avatars2.githubusercontent.com/u/2254731?s=400&u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&v=4\",\r\n    \"whatsapp\": \"123456789\",\r\n    \"bio\": \"CTO at @Rocketseat. Passionate about education and changing people's lives through programming.\",\r\n    \"subject\": \"Matemática\",\r\n    \"cost\": 80,\r\n    \"schedule\": [\r\n        {\"week_day\": 1, \"from\": \"08:00\", \"to\": \"12:00\"},\r\n        {\"week_day\": 3, \"from\": \"18:00\", \"to\": \"22:00\"},\r\n        {\"week_day\": 4, \"from\": \"09:00\", \"to\": \"13:00\"}\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/connections",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"connections"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Connections",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/connections",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"connections"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Classes",
+			"item": [
+				{
+					"name": "Create Classes",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Diego Fernandes\",\r\n    \"avatar\": \"https://avatars2.githubusercontent.com/u/2254731?s=400&u=0ba16a79456c2f250e7579cb388fa18c5c2d7d65&v=4\",\r\n    \"whatsapp\": \"123456789\",\r\n    \"bio\": \"CTO at @Rocketseat. Passionate about education and changing people's lives through programming.\",\r\n    \"subject\": \"Matemática\",\r\n    \"cost\": 80,\r\n    \"schedule\": [\r\n        {\"week_day\": 1, \"from\": \"08:00\", \"to\": \"12:00\"},\r\n        {\"week_day\": 3, \"from\": \"18:00\", \"to\": \"22:00\"},\r\n        {\"week_day\": 4, \"from\": \"09:00\", \"to\": \"13:00\"}\r\n    ]\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3333/classes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"classes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Classes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3333/classes?week_day=1&subject=Matemática&time=11:00",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3333",
+							"path": [
+								"classes"
+							],
+							"query": [
+								{
+									"key": "week_day",
+									"value": "1"
+								},
+								{
+									"key": "subject",
+									"value": "Matemática"
+								},
+								{
+									"key": "time",
+									"value": "11:00"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,35 +1,56 @@
+// eslint-disable-next-line 
 import React from 'react';
 import whatsappIcon from '../../assets/images/icons/whatsapp.svg';
 
 import './styles.css'
+import api from '../../services/api';
 
-function TeacherItem(){
+export interface Teacher {
+    id: number;
+    avatar: string;
+    bio: string;
+    cost: number;
+    name: string;
+    subject: string;
+    whatsapp: string;
+}
+
+interface TeacherItemProps {
+    teacher: Teacher;
+}
+
+const TeacherItem: React.FC<TeacherItemProps> = ({ teacher }) => {
+    function createNewConnection() {
+        api.post('connections', {
+            user_id: teacher.id,
+        })
+    }
+    
     return(
         <article className="teacher-item">
-        <header>
-            <img src="https://avatars1.githubusercontent.com/u/43504804?s=460&u=374dd67fe3927ec2ecbc173fe167ec79e18c6548&v=4" alt="Priscila Silva" />
-            <div>
-                <strong>Priscila Silva</strong>
-                <span>Química</span>
-            </div>
-        </header>
-        <p>
-        Formada em Análise e Desenvolvimento de sistemas, sempre fui apaixonada por tecnologia.
-        </p>
-        
-        <footer>
-            <p>
-                Preço/hora
-                <strong> R$ 100,00 </strong>                          
-            </p>
-            <button type="button">
-                <img src={whatsappIcon} alt="WhatsApp" />
-                Entrar em contato
-            </button>
-        </footer>        
-        </article>
+            <header>
+                <img src={teacher.avatar} alt={teacher.name}/>
+                <div>
+                    <strong>{teacher.name}</strong>
+                    <span>{teacher.subject}</span>
+                </div>
+            </header>
 
-    )
-}              
+            <p>{teacher.bio}</p>
+
+            <footer>
+                <p>
+                    Preço/hora
+                    <strong>R$ {teacher.cost}</strong>
+                </p>
+                <a target="_blank" onClick={createNewConnection} href={`https://wa.me/${teacher.whatsapp}`}>
+                
+                    <img src={whatsappIcon} alt="Whatsapp"/>
+                    Entrar em contato
+                </a>
+            </footer>
+        </article>
+    );
+}
 
 export default TeacherItem;

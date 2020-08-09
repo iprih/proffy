@@ -24,3 +24,7 @@ Após baixar o projeto, acesse ele do seu terminal rode os comandos:
 
 :shipit:
 - Contato: [Priscila Silva](https://linkedin.com/in/silva-priscila)
+
+
+
+https://www.linkedin.com/in/silva-priscila?miniProfileUrn=urn%3Ali%3Afs_miniProfile%3AACoAABDmOS0Bhk_l7XtsLh_jcAoaErg2RNSM-2o&lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BDDhEtZiCQMSV%2BLWCyc5lTw%3D%3D&licu=urn%3Ali%3Acontrol%3Ad_flagship3_feed-actor_container&lici=dLuBvSuLSxOWHMYRZ0pD%2Bg%3D%3D
